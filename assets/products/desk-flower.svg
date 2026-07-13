@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" role="img" aria-label="Crochet desk flower in a pot">
+  <defs>
+    <radialGradient id="dk-bg" cx="50%" cy="36%" r="78%">
+      <stop offset="0%" stop-color="#FBF1E7"/><stop offset="100%" stop-color="#F0E0CF"/>
+    </radialGradient>
+    <linearGradient id="dk-p1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F3B9AA"/><stop offset="100%" stop-color="#E29B88"/>
+    </linearGradient>
+    <linearGradient id="dk-pot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D9A38C"/><stop offset="100%" stop-color="#C4876E"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="520" fill="url(#dk-bg)"/>
+  <!-- stems -->
+  <g stroke="#8FA382" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M300 300 L300 360"/><path d="M235 320 C245 350 270 358 296 360"/><path d="M365 320 C355 350 330 358 304 360"/>
+  </g>
+  <!-- flowers -->
+  <g transform="translate(300 250)">
+    <g fill="url(#dk-p1)" stroke="#C56B78" stroke-width="2.5" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-64" rx="26" ry="46"/>
+      <ellipse cx="61" cy="-20" rx="26" ry="46" transform="rotate(72 61 -20)"/>
+      <ellipse cx="38" cy="52" rx="26" ry="46" transform="rotate(144 38 52)"/>
+      <ellipse cx="-38" cy="52" rx="26" ry="46" transform="rotate(216 -38 52)"/>
+      <ellipse cx="-61" cy="-20" rx="26" ry="46" transform="rotate(288 -61 -20)"/>
+    </g>
+    <circle r="30" fill="#F2C94C"/><circle r="30" fill="none" stroke="#E0B03A" stroke-width="3" stroke-dasharray="3 6"/>
+  </g>
+  <g transform="translate(232 262) scale(0.72)">
+    <g fill="#EBA6AE" stroke="#C56B78" stroke-width="3" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="24" ry="44"/><ellipse cx="57" cy="-19" rx="24" ry="44" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="24" ry="44" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="24" ry="44" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="24" ry="44" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="26" fill="#F2C94C"/>
+  </g>
+  <g transform="translate(368 262) scale(0.72)">
+    <g fill="#C9A0D6" stroke="#9A6BAC" stroke-width="3" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="24" ry="44"/><ellipse cx="57" cy="-19" rx="24" ry="44" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="24" ry="44" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="24" ry="44" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="24" ry="44" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="26" fill="#F2C94C"/>
+  </g>
+  <!-- pot -->
+  <path d="M232 360 L368 360 L352 452 Q300 466 248 452 Z" fill="url(#dk-pot)"/>
+  <rect x="222" y="344" width="156" height="26" rx="8" fill="#C4876E"/>
+  <g stroke="#B5765C" stroke-width="3" stroke-dasharray="4 7" fill="none">
+    <path d="M248 392 L352 392"/><path d="M251 418 L349 418"/>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" role="img" aria-label="Handmade crochet flower">
+  <defs>
+    <radialGradient id="hf-bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#FCEEF0"/>
+      <stop offset="100%" stop-color="#F4DDE1"/>
+    </radialGradient>
+    <linearGradient id="hf-p1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EBA6AE"/><stop offset="100%" stop-color="#D98A94"/>
+    </linearGradient>
+    <linearGradient id="hf-p2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DE8E99"/><stop offset="100%" stop-color="#C56B78"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="520" fill="url(#hf-bg)"/>
+  <!-- leaves + stem -->
+  <path d="M300 300 C298 380 296 430 300 480" stroke="#8FA382" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M300 400 C260 380 235 360 220 330 C265 330 292 355 300 400 Z" fill="#9DAE8E"/>
+  <path d="M300 430 C340 415 366 396 382 368 C336 366 308 388 300 430 Z" fill="#8FA382"/>
+  <!-- flower -->
+  <g transform="translate(300 240)">
+    <g fill="url(#hf-p1)" stroke="#C56B78" stroke-width="2" stroke-dasharray="5 5" opacity="0.98">
+      <ellipse cx="0" cy="-95" rx="34" ry="60"/>
+      <ellipse cx="0" cy="95" rx="34" ry="60"/>
+      <ellipse cx="-95" cy="0" rx="60" ry="34"/>
+      <ellipse cx="95" cy="0" rx="60" ry="34"/>
+      <ellipse cx="-67" cy="-67" rx="34" ry="60" transform="rotate(-45 -67 -67)"/>
+      <ellipse cx="67" cy="-67" rx="34" ry="60" transform="rotate(45 67 -67)"/>
+      <ellipse cx="-67" cy="67" rx="34" ry="60" transform="rotate(45 -67 67)"/>
+      <ellipse cx="67" cy="67" rx="34" ry="60" transform="rotate(-45 67 67)"/>
+    </g>
+    <g fill="url(#hf-p2)" stroke="#B15968" stroke-width="2" stroke-dasharray="4 4">
+      <ellipse cx="0" cy="-55" rx="24" ry="42" transform="rotate(22 0 -55)"/>
+      <ellipse cx="52" cy="-17" rx="24" ry="42" transform="rotate(94 52 -17)"/>
+      <ellipse cx="32" cy="45" rx="24" ry="42" transform="rotate(166 32 45)"/>
+      <ellipse cx="-32" cy="45" rx="24" ry="42" transform="rotate(238 -32 45)"/>
+      <ellipse cx="-52" cy="-17" rx="24" ry="42" transform="rotate(310 -52 -17)"/>
+    </g>
+    <circle r="38" fill="#F2C94C"/>
+    <circle r="38" fill="none" stroke="#E0B03A" stroke-width="3" stroke-dasharray="3 6"/>
+    <g fill="#E0A92E">
+      <circle cx="-12" cy="-8" r="4"/><circle cx="10" cy="-12" r="4"/><circle cx="14" cy="10" r="4"/>
+      <circle cx="-8" cy="12" r="4"/><circle cx="0" cy="0" r="4"/><circle cx="-18" cy="6" r="3"/><circle cx="18" cy="-2" r="3"/>
+    </g>
+  </g>
+</svg>

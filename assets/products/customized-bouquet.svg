@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 660" role="img" aria-label="Handmade crochet bouquet">
+  <defs>
+    <radialGradient id="bq-bg" cx="50%" cy="34%" r="80%">
+      <stop offset="0%" stop-color="#FCEFF1"/><stop offset="55%" stop-color="#F5DEE2"/><stop offset="100%" stop-color="#EFD3D8"/>
+    </radialGradient>
+    <linearGradient id="bq-wrap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7EAD9"/><stop offset="100%" stop-color="#E9D2B4"/>
+    </linearGradient>
+    <linearGradient id="bq-rose" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EBA6AE"/><stop offset="100%" stop-color="#D98A94"/></linearGradient>
+    <linearGradient id="bq-plum" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C9A0D6"/><stop offset="100%" stop-color="#B283C2"/></linearGradient>
+    <linearGradient id="bq-peach" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F3B9AA"/><stop offset="100%" stop-color="#E29B88"/></linearGradient>
+    <linearGradient id="bq-cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FBF0DC"/><stop offset="100%" stop-color="#F2DFC0"/></linearGradient>
+  </defs>
+  <rect width="600" height="660" fill="url(#bq-bg)"/>
+
+  <!-- soft dot texture -->
+  <g fill="#ffffff" opacity="0.25">
+    <circle cx="80" cy="90" r="4"/><circle cx="520" cy="120" r="5"/><circle cx="140" cy="200" r="3"/><circle cx="470" cy="240" r="3"/><circle cx="60" cy="330" r="4"/><circle cx="540" cy="360" r="4"/>
+  </g>
+
+  <!-- wrap / cone -->
+  <path d="M300 640 L188 452 Q300 500 412 452 Z" fill="url(#bq-wrap)"/>
+  <path d="M300 640 L188 452 Q300 500 412 452 Z" fill="none" stroke="#D9BE97" stroke-width="3" stroke-dasharray="6 8"/>
+  <path d="M300 640 L232 520 M300 640 L368 520" stroke="#D9BE97" stroke-width="2.5" stroke-dasharray="5 7"/>
+
+  <!-- ribbon -->
+  <path d="M255 500 Q300 520 345 500 L336 548 Q300 532 264 548 Z" fill="#C56B78"/>
+  <path d="M300 522 C280 540 250 556 232 578 C258 566 288 552 300 534 Z" fill="#B15968"/>
+  <path d="M300 522 C320 540 350 556 368 578 C342 566 312 552 300 534 Z" fill="#B15968"/>
+  <circle cx="300" cy="518" r="10" fill="#D98A94"/>
+
+  <!-- stems -->
+  <g stroke="#8FA382" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M300 500 L300 300"/><path d="M300 500 L215 320"/><path d="M300 500 L385 320"/>
+    <path d="M300 500 L150 360"/><path d="M300 500 L450 360"/>
+  </g>
+  <!-- leaves -->
+  <g fill="#9DAE8E">
+    <path d="M258 400 C226 388 206 372 196 350 C232 350 254 372 258 400 Z"/>
+    <path d="M342 400 C374 388 394 372 404 350 C368 350 346 372 342 400 Z"/>
+  </g>
+
+  <!-- flower helper: 5-petal bloom repeated -->
+  <!-- center top -->
+  <g transform="translate(300 250)">
+    <g fill="url(#bq-rose)" stroke="#C56B78" stroke-width="2.5" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="26" ry="46"/><ellipse cx="57" cy="-19" rx="26" ry="46" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="26" ry="46" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="26" ry="46" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="26" ry="46" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="30" fill="#F2C94C"/><circle r="30" fill="none" stroke="#E0B03A" stroke-width="3" stroke-dasharray="3 6"/>
+  </g>
+  <!-- left -->
+  <g transform="translate(205 300) scale(0.86)">
+    <g fill="url(#bq-plum)" stroke="#9A6BAC" stroke-width="2.5" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="26" ry="46"/><ellipse cx="57" cy="-19" rx="26" ry="46" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="26" ry="46" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="26" ry="46" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="26" ry="46" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="28" fill="#F2C94C"/>
+  </g>
+  <!-- right -->
+  <g transform="translate(395 300) scale(0.86)">
+    <g fill="url(#bq-peach)" stroke="#C56B78" stroke-width="2.5" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="26" ry="46"/><ellipse cx="57" cy="-19" rx="26" ry="46" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="26" ry="46" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="26" ry="46" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="26" ry="46" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="28" fill="#F2C94C"/>
+  </g>
+  <!-- far left -->
+  <g transform="translate(150 350) scale(0.72)">
+    <g fill="url(#bq-cream)" stroke="#D9BE97" stroke-width="3" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="26" ry="46"/><ellipse cx="57" cy="-19" rx="26" ry="46" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="26" ry="46" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="26" ry="46" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="26" ry="46" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="26" fill="#E8B84B"/>
+  </g>
+  <!-- far right -->
+  <g transform="translate(450 350) scale(0.72)">
+    <g fill="url(#bq-rose)" stroke="#C56B78" stroke-width="3" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-60" rx="26" ry="46"/><ellipse cx="57" cy="-19" rx="26" ry="46" transform="rotate(72 57 -19)"/>
+      <ellipse cx="35" cy="49" rx="26" ry="46" transform="rotate(144 35 49)"/><ellipse cx="-35" cy="49" rx="26" ry="46" transform="rotate(216 -35 49)"/>
+      <ellipse cx="-57" cy="-19" rx="26" ry="46" transform="rotate(288 -57 -19)"/>
+    </g>
+    <circle r="26" fill="#F2C94C"/>
+  </g>
+</svg>

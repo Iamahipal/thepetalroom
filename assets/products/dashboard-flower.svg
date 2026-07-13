@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" role="img" aria-label="Crochet dashboard flower">
+  <defs>
+    <radialGradient id="db-bg" cx="50%" cy="36%" r="78%">
+      <stop offset="0%" stop-color="#EFE6F0"/><stop offset="100%" stop-color="#DFD0E0"/>
+    </radialGradient>
+    <linearGradient id="db-p1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9A0D6"/><stop offset="100%" stop-color="#B283C2"/>
+    </linearGradient>
+    <linearGradient id="db-p2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EBA6AE"/><stop offset="100%" stop-color="#D98A94"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="520" fill="url(#db-bg)"/>
+  <!-- dashboard curve -->
+  <path d="M0 470 C160 410 440 410 600 470 L600 520 L0 520 Z" fill="#4A2E35" opacity="0.85"/>
+  <path d="M0 470 C160 410 440 410 600 470" fill="none" stroke="#6E5158" stroke-width="4"/>
+  <!-- flowers on the dash -->
+  <g transform="translate(300 320)">
+    <g fill="url(#db-p1)" stroke="#9A6BAC" stroke-width="2.5" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-78" rx="30" ry="54"/>
+      <ellipse cx="74" cy="-24" rx="30" ry="54" transform="rotate(72 74 -24)"/>
+      <ellipse cx="46" cy="63" rx="30" ry="54" transform="rotate(144 46 63)"/>
+      <ellipse cx="-46" cy="63" rx="30" ry="54" transform="rotate(216 -46 63)"/>
+      <ellipse cx="-74" cy="-24" rx="30" ry="54" transform="rotate(288 -74 -24)"/>
+    </g>
+    <circle r="34" fill="#F2C94C"/>
+    <circle r="34" fill="none" stroke="#E0B03A" stroke-width="3" stroke-dasharray="3 6"/>
+  </g>
+  <g transform="translate(180 350) scale(0.62)">
+    <g fill="url(#db-p2)" stroke="#C56B78" stroke-width="3" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-70" rx="28" ry="50"/>
+      <ellipse cx="67" cy="-22" rx="28" ry="50" transform="rotate(72 67 -22)"/>
+      <ellipse cx="41" cy="57" rx="28" ry="50" transform="rotate(144 41 57)"/>
+      <ellipse cx="-41" cy="57" rx="28" ry="50" transform="rotate(216 -41 57)"/>
+      <ellipse cx="-67" cy="-22" rx="28" ry="50" transform="rotate(288 -67 -22)"/>
+    </g>
+    <circle r="30" fill="#F2C94C"/>
+  </g>
+  <g transform="translate(420 352) scale(0.55)">
+    <g fill="url(#db-p2)" stroke="#C56B78" stroke-width="3" stroke-dasharray="6 6">
+      <ellipse cx="0" cy="-70" rx="28" ry="50"/>
+      <ellipse cx="67" cy="-22" rx="28" ry="50" transform="rotate(72 67 -22)"/>
+      <ellipse cx="41" cy="57" rx="28" ry="50" transform="rotate(144 41 57)"/>
+      <ellipse cx="-41" cy="57" rx="28" ry="50" transform="rotate(216 -41 57)"/>
+      <ellipse cx="-67" cy="-22" rx="28" ry="50" transform="rotate(288 -67 -22)"/>
+    </g>
+    <circle r="30" fill="#F2C94C"/>
+  </g>
+</svg>
