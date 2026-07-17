@@ -1,0 +1,20 @@
+{
+  "name": "thepetalroom",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The Petal Room — an immersive digital craft atelier for handmade crochet flowers.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.1.20",
+    "ogl": "^1.0.11"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  }
+}

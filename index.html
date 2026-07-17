@@ -2,326 +2,257 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#D98A94" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FBF6F1" />
   <title>The Petal Room — Handmade Crochet Flowers | Flowers That Last, Forever</title>
-  <meta name="description" content="The Petal Room crafts handmade crochet flowers, bouquets, keychains and décor that never wilt. Order beautiful, lasting floral gifts on WhatsApp. Handcrafted with love in Pune, India." />
-
-  <!-- Open Graph -->
+  <meta name="description" content="The Petal Room is a digital craft atelier for handmade crochet flowers, bouquets, keychains & décor that never wilt. Build your own bouquet and order on WhatsApp. Handcrafted with love in Pune, India." />
   <meta property="og:title" content="The Petal Room — Handmade Crochet Flowers" />
-  <meta property="og:description" content="Flowers that last, memories forever. Handcrafted crochet blooms & gifts. Order on WhatsApp." />
+  <meta property="og:description" content="Flowers that last, memories forever. Handcrafted crochet blooms & gifts — build your bouquet and order on WhatsApp." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/products/customized-bouquet.svg" />
+  <meta property="og:image" content="/thepetalroom/assets/products/customized-bouquet.svg" />
+  <link rel="icon" type="image/svg+xml" href="/thepetalroom/assets/favicon.svg" />
 
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <!-- Self-hosted fonts: preload the two most-used cuts, then the face declarations -->
-  <link rel="preload" href="assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/fonts.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Self-hosted fonts: preload the two hero cuts, then the declarations -->
+  <link rel="preload" href="/thepetalroom/assets/fonts/manrope-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/thepetalroom/assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/thepetalroom/assets/fonts.css" />
+
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body>
-  <!-- ===================== HEADER / NAV ===================== -->
+  <a class="skip-link" href="#collection">Skip to products</a>
+
+  <!-- ===== INTRO LOADER ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg viewBox="0 0 120 120" fill="none">
+        <g stroke="var(--rose)" stroke-width="3" stroke-linecap="round" fill="none">
+          <circle class="draw" cx="60" cy="60" r="16" pathLength="1" stroke="var(--gold)" stroke-width="6" />
+          <ellipse class="draw" cx="60" cy="30" rx="11" ry="18" pathLength="1" />
+          <ellipse class="draw" cx="60" cy="90" rx="11" ry="18" pathLength="1" />
+          <ellipse class="draw" cx="30" cy="60" rx="18" ry="11" pathLength="1" />
+          <ellipse class="draw" cx="90" cy="60" rx="18" ry="11" pathLength="1" />
+          <ellipse class="draw" cx="39" cy="39" rx="11" ry="17" transform="rotate(-45 39 39)" pathLength="1" />
+          <ellipse class="draw" cx="81" cy="39" rx="11" ry="17" transform="rotate(45 81 39)" pathLength="1" />
+          <ellipse class="draw" cx="39" cy="81" rx="11" ry="17" transform="rotate(45 39 81)" pathLength="1" />
+          <ellipse class="draw" cx="81" cy="81" rx="11" ry="17" transform="rotate(-45 81 81)" pathLength="1" />
+        </g>
+      </svg>
+      <p class="loader-word">The Petal Room</p>
+      <p class="loader-sub">crocheting something lovely…</p>
+    </div>
+    <button class="loader-skip" id="loaderSkip" type="button">Skip intro →</button>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
   <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="#home" class="brand" aria-label="The Petal Room home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="30" height="30"><use href="#petal-logo" /></svg>
-        </span>
-        <span class="brand-text">
-          <span class="brand-name">The Petal Room</span>
-          <span class="brand-tag">handmade crochet blooms</span>
-        </span>
-      </a>
-
-      <nav class="main-nav" id="mainNav" aria-label="Primary">
-        <a href="#shop" class="nav-link">Shop</a>
-        <a href="#bestseller" class="nav-link">Custom</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#how" class="nav-link">How to Order</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="#" class="btn btn-whatsapp btn-sm nav-cta" data-wa data-wa-message="Hi The Petal Room! I'd love to know more about your handmade crochet flowers.">
-          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><use href="#wa-icon" /></svg>
-          Order on WhatsApp
+    <div class="header-inner">
+      <div class="header-pill">
+        <a href="#top" class="brand" aria-label="The Petal Room — home">
+          <span class="brand-mark"><svg viewBox="0 0 32 32"><use href="#i-logo" /></svg></span>
+          <span class="brand-text">
+            <span class="brand-name">The Petal Room</span>
+            <span class="brand-tag">handmade crochet blooms</span>
+          </span>
         </a>
-      </nav>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
-        <span></span><span></span><span></span>
-      </button>
+        <nav class="main-nav" id="mainNav" aria-label="Primary">
+          <a class="nav-link" href="#collection">Shop</a>
+          <a class="nav-link" href="#bouquet">Build a bouquet</a>
+          <a class="nav-link" href="#story">Atelier</a>
+          <a class="nav-link" href="#process">How to order</a>
+          <a class="btn btn-whatsapp btn-sm nav-cta magnetic" href="#" data-wa data-wa-message="Hi The Petal Room! I'd love to know more about your handmade crochet flowers. 🌸">
+            <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa" /></svg> Order
+          </a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main id="home">
-    <!-- ===================== HERO ===================== -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-petals" aria-hidden="true"></div>
+  <main id="top">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Handcrafted in Pune, India</span>
-          <h1 id="hero-title">Flowers that <em>last</em>,<br />memories forever.</h1>
-          <p class="hero-sub">
-            Delicate crochet blooms, bouquets and little gifts — hand-stitched loop by loop,
-            so they never wilt, never fade, and stay beautiful for years.
-          </p>
-          <div class="hero-actions">
-            <a href="#shop" class="btn btn-primary btn-lg">Explore the collection</a>
-            <a href="#" class="btn btn-ghost btn-lg" data-wa data-wa-message="Hi The Petal Room! I'd love to place an order for your handmade crochet flowers. 🌸">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#wa-icon" /></svg>
-              Order on WhatsApp
+          <span class="eyebrow" data-reveal>Handcrafted in Pune, India</span>
+          <h1 id="hero-title" data-splitlines>Flowers that <em>last</em>, memories forever.</h1>
+          <p class="hero-sub" data-reveal>Delicate crochet blooms, bouquets and little gifts — hand-stitched loop by loop, so they never wilt, never fade, and stay beautiful for years.</p>
+          <div class="hero-actions" data-reveal>
+            <a href="#collection" class="btn btn-primary btn-lg magnetic">Explore the collection</a>
+            <a href="#" class="btn btn-ghost btn-lg magnetic" data-wa data-wa-message="Hi The Petal Room! I'd love to place an order for your handmade crochet flowers. 🌸">
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa" /></svg> Order on WhatsApp
             </a>
           </div>
-          <ul class="hero-stats">
-            <li><strong>500+</strong><span>Happy customers</span></li>
-            <li><strong>1000+</strong><span>Gifts crafted</span></li>
-            <li><strong>4.9<span class="star">★</span></strong><span>Average rating</span></li>
-          </ul>
+          <ul class="hero-stats" id="heroStats" data-reveal></ul>
         </div>
-
-        <div class="hero-visual">
-          <div class="hero-card hero-card-main">
-            <img src="assets/products/customized-bouquet.svg" alt="A handmade crochet bouquet of pastel flowers" loading="eager" />
-            <span class="hero-card-badge">Best seller ✦ Custom bouquets</span>
+        <div class="hero-visual" data-hero-visual>
+          <div class="hero-card" data-parallax="0.06">
+            <img src="/thepetalroom/assets/products/customized-bouquet.svg" alt="A handmade crochet bouquet of pastel flowers" width="420" height="470" />
+            <span class="hero-card-badge">Best seller · Custom bouquets</span>
           </div>
-          <div class="hero-card hero-card-float hero-card-1">
-            <img src="assets/products/flower-keychain.svg" alt="Crochet flower keychain" loading="lazy" />
-          </div>
-          <div class="hero-card hero-card-float hero-card-2">
-            <img src="assets/products/handcrafted-flower.svg" alt="Single handcrafted crochet flower" loading="lazy" />
-          </div>
+          <div class="hero-float f1" data-parallax="0.16"><img src="/thepetalroom/assets/products/flower-keychain.svg" alt="Crochet flower keychain" width="150" height="150" /></div>
+          <div class="hero-float f2" data-parallax="0.12"><img src="/thepetalroom/assets/products/handcrafted-flower.svg" alt="Single handcrafted crochet flower" width="150" height="150" /></div>
         </div>
       </div>
-      <div class="hero-wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,32 C960,64 1200,16 1440,40 L1440,80 L0,80 Z"></path></svg>
-      </div>
+      <div class="hero-scroll-hint" aria-hidden="true"><span class="dot"></span>Scroll</div>
     </section>
 
-    <!-- ===================== TRUST STRIP ===================== -->
-    <section class="trust" aria-label="Why customers love us">
-      <div class="container trust-grid">
-        <div class="trust-item"><span class="trust-ico">🧶</span><div><strong>100% handmade</strong><p>Every petal crocheted by hand</p></div></div>
-        <div class="trust-item"><span class="trust-ico">🌿</span><div><strong>Never wilts</strong><p>Lasts for years, not days</p></div></div>
-        <div class="trust-item"><span class="trust-ico">🎁</span><div><strong>Made to order</strong><p>Colours & styles your way</p></div></div>
-        <div class="trust-item"><span class="trust-ico">🚚</span><div><strong>Ships across India</strong><p>Carefully packed with love</p></div></div>
-      </div>
-    </section>
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"></div></div>
 
-    <!-- ===================== SHOP ===================== -->
-    <section class="section shop" id="shop" aria-labelledby="shop-title">
+    <!-- ===== COLLECTION ===== -->
+    <section class="section collection" id="collection" aria-labelledby="collection-title">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow center"><span class="eyebrow-dot"></span> The Collection</span>
-          <h2 id="shop-title">Blooms for every little moment</h2>
-          <p class="section-lede">Pick a favourite, tap <em>Order on WhatsApp</em>, and we'll craft it just for you.</p>
+          <span class="eyebrow" data-reveal>The Collection</span>
+          <h2 id="collection-title" data-splitlines>Blooms for every little moment</h2>
+          <p class="section-lede" data-reveal>Pick a favourite, tap <em>Order</em>, and we'll craft it just for you — no two are ever exactly alike.</p>
         </div>
-
-        <div class="product-grid" id="productGrid">
-          <!-- Cards injected by script.js from the PRODUCTS config -->
-        </div>
-
-        <p class="shop-note">
-          Can't decide? <a href="#" data-wa data-wa-message="Hi The Petal Room! I'd like some help choosing the perfect crochet gift. 🌸">Message us on WhatsApp</a> and we'll help you pick.
-        </p>
+        <div class="product-grid" id="productGrid"></div>
+        <p class="collection-note" data-reveal>Can't decide? <a href="#" data-wa data-wa-message="Hi The Petal Room! I'd like some help choosing the perfect crochet gift. 🌸">Message us on WhatsApp</a> and we'll help you pick.</p>
       </div>
     </section>
 
-    <!-- ===================== BESTSELLER / CUSTOM ===================== -->
-    <section class="section bestseller" id="bestseller" aria-labelledby="best-title">
-      <div class="container bestseller-inner">
-        <div class="bestseller-visual">
-          <img src="assets/products/customized-bouquet.svg" alt="A custom crochet bouquet tied with ribbon" loading="lazy" />
-          <span class="floating-tag tag-1">Your colours 🎨</span>
-          <span class="floating-tag tag-2">Any occasion 💐</span>
+    <!-- ===== BUILD-YOUR-BOUQUET ===== -->
+    <section class="section bouquet" id="bouquet" aria-labelledby="bouquet-title">
+      <div class="container bouquet-inner">
+        <div class="bouquet-stage" data-reveal>
+          <div class="bouquet-stage-inner" id="bouquetStage"></div>
         </div>
-        <div class="bestseller-copy">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Best seller</span>
-          <h2 id="best-title">Customised bouquets, made only for them</h2>
-          <p>
-            Tell us the person, the palette and the occasion — a birthday, an anniversary,
-            a graduation, or just because. We crochet a one-of-a-kind bouquet that says
-            exactly what you mean, and lasts long after the day is over.
-          </p>
-          <ul class="checklist">
-            <li>Choose your flowers, colours & wrap</li>
-            <li>Add a hand-written note</li>
-            <li>Keepsake box available</li>
-          </ul>
-          <div class="bestseller-actions">
-            <span class="price-pill">From ₹350</span>
-            <a href="#" class="btn btn-whatsapp" data-wa data-wa-message="Hi The Petal Room! I'd like to order a customised crochet bouquet. Here's what I have in mind:%0A%0A• For: %0A• Occasion: %0A• Favourite colours: %0A• Budget: ">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#wa-icon" /></svg>
-              Design mine on WhatsApp
+        <div class="bouquet-controls">
+          <span class="eyebrow" data-reveal>Signature · Made for them</span>
+          <h2 id="bouquet-title" data-reveal>Build your own bouquet</h2>
+          <p class="section-lede" data-reveal>Design it here, watch it bloom, then send us your exact choices on WhatsApp.</p>
+
+          <div class="control-group" data-reveal>
+            <span class="control-label" id="lbl-colors">Choose your colours (up to 3)</span>
+            <div class="swatches" id="bqSwatches" role="group" aria-labelledby="lbl-colors"></div>
+          </div>
+          <div class="control-group" data-reveal>
+            <span class="control-label" id="lbl-size">Size</span>
+            <div class="chip-row" id="bqSizes" role="group" aria-labelledby="lbl-size"></div>
+          </div>
+          <div class="control-group" data-reveal>
+            <span class="control-label" id="lbl-occasion">Occasion</span>
+            <div class="chip-row" id="bqOccasions" role="group" aria-labelledby="lbl-occasion"></div>
+          </div>
+
+          <p class="bouquet-summary" id="bqSummary" aria-live="polite"></p>
+          <div class="bouquet-cta" data-reveal>
+            <a href="#" class="btn btn-whatsapp btn-lg magnetic" id="bqOrder" data-wa>
+              <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa" /></svg> Design mine on WhatsApp
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== ABOUT ===================== -->
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="container about-inner">
-        <div class="about-copy">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> Our story</span>
-          <h2 id="about-title">A little room full of petals & patience</h2>
-          <p>
-            The Petal Room began with a hook, a basket of yarn, and a simple wish — to give
-            people flowers that never have to be thrown away. Every piece is crocheted slowly
-            by hand, stitch after stitch, until an ordinary strand of yarn blossoms into
-            something you'll want to keep forever.
-          </p>
-          <p>
-            From tiny keychains to full bouquets, each order is made just for you — with
-            premium finishing, thoughtful detail, and a lot of love.
-          </p>
-          <a href="#shop" class="btn btn-primary">See what we make</a>
+    <!-- ===== STORY ===== -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="container story-inner">
+        <div class="story-copy">
+          <span class="eyebrow" data-reveal>Our story</span>
+          <h2 id="story-title" data-splitlines>A little room full of petals &amp; patience</h2>
+          <p data-reveal>The Petal Room began with a hook, a basket of yarn, and a simple wish — to give people flowers that never have to be thrown away. Every piece is crocheted slowly by hand, stitch after stitch, until an ordinary strand of yarn blossoms into something you'll want to keep forever.</p>
+          <p data-reveal>From tiny keychains to full bouquets, each order is made just for you — with premium finishing, thoughtful detail, and a lot of love.</p>
+          <a href="#collection" class="btn btn-primary magnetic" data-reveal>See what we make</a>
         </div>
-        <div class="about-values">
-          <div class="value-card"><span>🌸</span><h3>Handmade craftsmanship</h3><p>No two blooms are ever exactly alike.</p></div>
-          <div class="value-card"><span>✨</span><h3>Premium finishing</h3><p>Neat, sturdy and beautifully detailed.</p></div>
-          <div class="value-card"><span>💝</span><h3>Perfect for occasions</h3><p>Gifts that feel personal and last.</p></div>
-          <div class="value-card"><span>🧵</span><h3>Custom orders</h3><p>Your colours, your idea, your bloom.</p></div>
+        <div class="story-values">
+          <div class="value-card" data-reveal><span class="ico">🌸</span><h3>Handmade craft</h3><p>No two blooms are ever exactly alike.</p></div>
+          <div class="value-card" data-reveal><span class="ico">✨</span><h3>Premium finish</h3><p>Neat, sturdy and beautifully detailed.</p></div>
+          <div class="value-card" data-reveal><span class="ico">💝</span><h3>For occasions</h3><p>Gifts that feel personal and last.</p></div>
+          <div class="value-card" data-reveal><span class="ico">🧵</span><h3>Custom orders</h3><p>Your colours, your idea, your bloom.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== HOW TO ORDER ===================== -->
-    <section class="section how" id="how" aria-labelledby="how-title">
+    <!-- ===== PROCESS ===== -->
+    <section class="section process" id="process" aria-labelledby="process-title">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow center"><span class="eyebrow-dot"></span> Simple & sweet</span>
-          <h2 id="how-title">How to order in 3 steps</h2>
+          <span class="eyebrow" data-reveal>Simple &amp; sweet</span>
+          <h2 id="process-title" data-splitlines>How to order in 3 steps</h2>
         </div>
         <ol class="steps">
-          <li class="step">
-            <span class="step-num">1</span>
-            <h3>Pick your bloom</h3>
-            <p>Browse the collection and choose a piece — or dream up a custom one.</p>
-          </li>
-          <li class="step">
-            <span class="step-num">2</span>
-            <h3>Message on WhatsApp</h3>
-            <p>Tap any order button. Your choice is pre-filled, so you just hit send.</p>
-          </li>
-          <li class="step">
-            <span class="step-num">3</span>
-            <h3>We craft & deliver</h3>
-            <p>We handcraft your order and ship it, carefully packed, to your door.</p>
-          </li>
+          <li class="step" data-reveal><span class="step-num">1</span><h3>Pick your bloom</h3><p>Browse the collection or design a custom bouquet above.</p></li>
+          <li class="step" data-reveal><span class="step-num">2</span><h3>Message on WhatsApp</h3><p>Tap any order button. Your choice is pre-filled — just hit send.</p></li>
+          <li class="step" data-reveal><span class="step-num">3</span><h3>We craft &amp; deliver</h3><p>We handcraft your order and ship it, carefully packed, to your door.</p></li>
         </ol>
-        <div class="how-cta">
-          <a href="#" class="btn btn-whatsapp btn-lg" data-wa data-wa-message="Hi The Petal Room! I'd like to place an order. 🌸">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#wa-icon" /></svg>
-            Start my order
+        <div class="process-cta" data-reveal>
+          <a href="#" class="btn btn-whatsapp btn-lg magnetic" data-wa data-wa-message="Hi The Petal Room! I'd like to place an order. 🌸">
+            <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa" /></svg> Start my order
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ===================== TESTIMONIALS ===================== -->
+    <!-- ===== TESTIMONIALS ===== -->
     <section class="section testimonials" aria-labelledby="love-title">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow center"><span class="eyebrow-dot"></span> Kind words</span>
-          <h2 id="love-title">Loved by 500+ happy hearts</h2>
-        </div>
-        <div class="testi-grid">
-          <figure class="testi-card">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"My bouquet still looks perfect months later. It's on my desk and everyone asks where I got it!"</blockquote>
-            <figcaption>— Aditi, Pune</figcaption>
-          </figure>
-          <figure class="testi-card">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"Ordered a custom set for my mom's birthday. The colours were exactly what I asked for. So thoughtful."</blockquote>
-            <figcaption>— Rohan, Mumbai</figcaption>
-          </figure>
-          <figure class="testi-card">
-            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"The little keychains are adorable and so well made. Ordering more as gifts for my whole team."</blockquote>
-            <figcaption>— Sneha, Bengaluru</figcaption>
-          </figure>
+          <span class="eyebrow" data-reveal>Kind words</span>
+          <h2 id="love-title" data-splitlines>Loved by 500+ happy hearts</h2>
         </div>
       </div>
+      <div class="testi-viewport"><div class="testi-track" id="testiTrack"></div></div>
     </section>
 
-    <!-- ===================== FINAL CTA ===================== -->
+    <!-- ===== FINAL CTA ===== -->
     <section class="section final-cta" id="contact" aria-labelledby="cta-title">
-      <div class="container final-cta-inner">
-        <h2 id="cta-title">Ready to gift flowers that last forever?</h2>
-        <p>Send us a message on WhatsApp — we'd love to craft something beautiful just for you.</p>
-        <a href="#" class="btn btn-whatsapp btn-lg" data-wa data-wa-message="Hi The Petal Room! I found you through your website and I'd love to order some handmade crochet flowers. 🌸">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#wa-icon" /></svg>
-          Chat with us on WhatsApp
+      <div class="container">
+        <h2 id="cta-title" data-splitlines>Ready to gift flowers that last forever?</h2>
+        <p data-reveal>Send us a message on WhatsApp — we'd love to craft something beautiful just for you.</p>
+        <a href="#" class="btn btn-whatsapp btn-lg magnetic" data-reveal data-wa data-wa-message="Hi The Petal Room! I found you through your website and I'd love to order some handmade crochet flowers. 🌸">
+          <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa" /></svg> Chat with us on WhatsApp
         </a>
-        <div class="contact-lines">
-          <a id="igLink" href="https://www.instagram.com/_thepetalroom_/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#ig-icon" /></svg>
-            @_thepetalroom_
-          </a>
-          <a id="emailLink" href="mailto:thepetalroom@gmail.com">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><use href="#mail-icon" /></svg>
-            thepetalroom@gmail.com
-          </a>
+        <div class="contact-lines" data-reveal>
+          <a id="igLink" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-ig" /></svg> <span id="igHandle"></span></a>
+          <a id="emailLink" href="#"><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg> <span id="emailText"></span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===================== FOOTER ===================== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28"><use href="#petal-logo" /></svg></span>
-        <div>
-          <p class="footer-name">The Petal Room</p>
-          <p class="footer-tag">Flowers that last, memories forever.</p>
-        </div>
+        <span class="brand-mark"><svg viewBox="0 0 32 32"><use href="#i-logo" /></svg></span>
+        <div><p class="footer-name">The Petal Room</p><p class="footer-tag">Flowers that last, memories forever.</p></div>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <a href="#shop">Shop</a>
-        <a href="#bestseller">Custom bouquets</a>
-        <a href="#about">About</a>
-        <a href="#how">How to order</a>
+        <a href="#collection">Shop</a>
+        <a href="#bouquet">Build a bouquet</a>
+        <a href="#story">Atelier</a>
+        <a href="#process">How to order</a>
         <a href="#" data-wa data-wa-message="Hi The Petal Room! 🌸">WhatsApp</a>
       </nav>
       <p class="footer-copy">© <span id="year"></span> The Petal Room · Handcrafted with 💗 in Pune, India</p>
     </div>
   </footer>
 
-  <!-- ===================== FLOATING WHATSAPP ===================== -->
-  <a href="#" class="fab-whatsapp" id="fabWhatsapp" data-wa data-wa-message="Hi The Petal Room! I'd like to order some handmade crochet flowers. 🌸" aria-label="Order on WhatsApp">
-    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><use href="#wa-icon" /></svg>
-    <span class="fab-label">Order on WhatsApp</span>
+  <a href="#" class="fab magnetic" id="fab" data-wa data-wa-message="Hi The Petal Room! I'd like to order some handmade crochet flowers. 🌸" aria-label="Order on WhatsApp">
+    <svg viewBox="0 0 24 24"><use href="#i-wa" /></svg><span class="fab-label">Order on WhatsApp</span>
   </a>
 
-  <!-- ===================== SVG SPRITE ===================== -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="wa-icon" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.8 11.8 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.8 11.8 0 0 0-3.48-8.413Z"/>
-      </symbol>
-      <symbol id="ig-icon" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38A5.9 5.9 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.12-1.38 5.9 5.9 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.12A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84M12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4m6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/>
-      </symbol>
-      <symbol id="mail-icon" viewBox="0 0 24 24">
-        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/>
-      </symbol>
-      <symbol id="petal-logo" viewBox="0 0 32 32">
-        <g>
-          <circle cx="16" cy="16" r="4" fill="#F2C94C"/>
-          <ellipse cx="16" cy="7" rx="3.4" ry="5" fill="currentColor"/>
-          <ellipse cx="16" cy="25" rx="3.4" ry="5" fill="currentColor"/>
-          <ellipse cx="7" cy="16" rx="5" ry="3.4" fill="currentColor"/>
-          <ellipse cx="25" cy="16" rx="5" ry="3.4" fill="currentColor"/>
-          <ellipse cx="9.5" cy="9.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(-45 9.5 9.5)" opacity=".85"/>
-          <ellipse cx="22.5" cy="9.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(45 22.5 9.5)" opacity=".85"/>
-          <ellipse cx="9.5" cy="22.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(45 9.5 22.5)" opacity=".85"/>
-          <ellipse cx="22.5" cy="22.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(-45 22.5 22.5)" opacity=".85"/>
-        </g>
-      </symbol>
-    </defs>
-  </svg>
+  <noscript>
+    <div style="position:fixed;left:0;right:0;bottom:0;background:#25D366;color:#fff;text-align:center;padding:14px;font-family:sans-serif;z-index:99999">
+      For the full experience please enable JavaScript — or
+      <a style="color:#fff;text-decoration:underline" href="https://wa.me/919876543210">order directly on WhatsApp</a>.
+    </div>
+  </noscript>
 
-  <script src="script.js"></script>
+  <!-- ===== ICON SPRITE ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.8 11.8 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.548 4.142 1.588 5.945L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.8 11.8 0 0 0-3.48-8.413"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38A5.9 5.9 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.12-1.38 5.9 5.9 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.12A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84M12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4m6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 32 32"><g><circle cx="16" cy="16" r="4" fill="#F2C94C"/><ellipse cx="16" cy="7" rx="3.4" ry="5" fill="currentColor"/><ellipse cx="16" cy="25" rx="3.4" ry="5" fill="currentColor"/><ellipse cx="7" cy="16" rx="5" ry="3.4" fill="currentColor"/><ellipse cx="25" cy="16" rx="5" ry="3.4" fill="currentColor"/><ellipse cx="9.5" cy="9.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(-45 9.5 9.5)" opacity=".85"/><ellipse cx="22.5" cy="9.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(45 22.5 9.5)" opacity=".85"/><ellipse cx="9.5" cy="22.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(45 9.5 22.5)" opacity=".85"/><ellipse cx="22.5" cy="22.5" rx="3.2" ry="4.6" fill="currentColor" transform="rotate(-45 22.5 22.5)" opacity=".85"/></g></symbol>
+  </defs></svg>
 </body>
 </html>
